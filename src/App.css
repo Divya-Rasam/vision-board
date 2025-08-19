@@ -1,4 +1,207 @@
-.App {
+Apply the cozy font everywhere
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(135deg, #fbe6e6, #e6f7fb);
+  min-height: 100vh;
+}
+
+/* Make navbar soft and modern */
+.navbar {
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Card styling for Vision Board goals */
+.card {
+  border: none;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* Buttons that match the vibe */
+.btn-primary {
+  background: #ff85a2;
+  border: none;
+}
+.btn-primary:hover {
+  background: #ff7090;
+}
+
+/* Make headings softer */
+h1, h2, h3, h4 {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Image styling for homepage */
+img {
+  border-radius: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.vision-board-container {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Left column for form */
+.vision-form-column {
+  flex: 1;
+}
+
+/* Right column for goals */
+.vision-goals-column {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+/* Polaroid card style */
+/* .polaroid {
+  background: white;
+  padding: 10px 10px 20px;
+  border-radius: 6px;
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.15);
+  text-align: center;
+  transform: rotate(var(--rotation, -2deg));
+  transition: transform 0.2s ease;
+} */
+
+.polaroid:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+/* Image inside polaroid */
+/* .polaroid img {
+  max-width: 100%;
+  border-radius: 4px;
+  margin-bottom: 10px;
+} */
+
+/* Caption in handwriting style */
+.polaroid-caption {
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.vision-goals-column {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* medium size */
+  gap: 2rem;
+}
+
+/* Polaroid card style */
+.polaroid {
+  background: white;
+  padding: 10px 10px 20px;
+  border-radius: 6px;
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.15);
+  text-align: center;
+  transform: rotate(var(--rotation, -2deg));
+  transition: transform 0.2s ease;
+
+  width: 100%;
+  aspect-ratio: 1 / 1.2; /* slightly taller than square */
+}
+
+.polaroid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +238,8 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
+
+
+
+
