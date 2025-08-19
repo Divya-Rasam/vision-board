@@ -1,0 +1,62 @@
+.card {
+  width: 220px;
+  height: 260px;
+  perspective: 1000px;
+}
+
+.cardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .cardInner {
+  transform: rotateY(180deg);
+}
+
+.cardFront,
+.cardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+  background: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Front */
+.cardFront {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.caption {
+  font-family: "Indie Flower", cursive;
+  margin-top: 8px;
+  font-size: 1rem;
+}
+
+/* Back */
+.cardBack {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-family: "Indie Flower", cursive;
+  background: #fdfdfd;
+}

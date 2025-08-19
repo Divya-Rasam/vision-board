@@ -4,7 +4,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-3">
       <NavLink className="navbar-brand fw-bold" to="/">
-        🎯 Vision Board
+         Vision Board
       </NavLink>
       <div className="collapse navbar-collapse">
         <ul className="navbar-nav ms-auto">
