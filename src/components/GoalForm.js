@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState } from "react";                   // Brings React state hook All form inputs are controlled via state
 
-function GoalForm({ onAddGoal }) {
-  const [title, setTitle] = useState("");
+export function GoalForm({ onAddGoal }) {              // receives a prop onAddGoal ---- onAddGoal is a callback -- when the form submits it receives the new goal object.
+
+  const [title, setTitle] = useState("");                   // Holds the title input, Controlled input pattern (value + onChange).
   const [reason, setReason] = useState("");
-  const [status, setStatus] = useState("Dreaming");
+  const [status, setStatus] = useState("Dreaming");                 // Default status for new goals, Lets the user set Dreaming, In Progress, or Achieved.
   const [imageLink, setImageLink] = useState("");
   const [imagePreview, setImagePreview] = useState("");
 
@@ -19,21 +20,21 @@ function GoalForm({ onAddGoal }) {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault();                          // stops page reload
     if (!title || !reason) {
       alert("Please fill in all fields!");
       return;
     }
 
-    const newGoal = {
+    const newGoal = {                                  // Builds newGoal
       id: Date.now(),
       title,
       reason,
       status,
-      image: imagePreview || imageLink || "", // always string
-    };
+      image: imagePreview || imageLink || "",                 // always string
+    }; 
 
-    onAddGoal(newGoal);
+    onAddGoal(newGoal);                                     //    Calls onAddGoal(newGoal) — parent will store it (e.g., in localStorage)
 
     // Reset form
     setTitle("");
@@ -81,7 +82,7 @@ function GoalForm({ onAddGoal }) {
         value={imageLink}
         onChange={(e) => {
           setImageLink(e.target.value);
-          setImagePreview(e.target.value); // sync with preview
+          setImagePreview(e.target.value);                       // sync with preview
         }}
       />
 
@@ -106,12 +107,12 @@ function GoalForm({ onAddGoal }) {
         </div>
       )}
 
-      <button className="btn btn-primary mt-3">Add Dream</button>
+      <button className="btn btn-warning mt-3">Add Dream</button>
     </form>
   );
 }
 
-export default GoalForm;
+// export default GoalForm;
 
 
 
